@@ -3,15 +3,14 @@ const VoiceResponse = require('twilio/lib/twiml/VoiceResponse');
 
 class Twilio {
 
-  phoneNumber = "+1 520 317 7189"; // +15203177189
-  phoneNumberSid = "PN42a5121daa3089b88b5de4a31b7cf856"; // twilio: from Active Numbers
-  tokenSid = "SK09e3c00431cd972701b87bd43a2e56e7"; // twilio: SID  from new API KEY
-  tokenSecret = "eFZ7auvoPcykFVY76ZUyPqYYsVnYy7nz"; // twilio: SECRET from new API KEY
-  accountSid = "AC1597dab72a1abfaeaf2ecc3b81ef800e"; // twilio: from dashboard
-  verify = "VA93afb25e90d948b9dbc70ace18b86c89"; // twilio: SERVICE SID from verify> create new service
-  outgoingApplicationSid = "AP56e3ce289fbac81ece043541048f6687"; //twilio: from Twiml App
-
-  localTunnelUrl = "https://forte-calls.loca.lt";
+  phoneNumber = process.env.PHONE_NUMBER //may need to trim whitespace in .env 
+  phoneNumberSid = process.env.ACTIVE_NUMBER_SID
+  tokenSid =  process.env.TOKEN_SID_API_KEY
+  tokenSecret = process.env.TOKEN_SECRET_API_KEY
+  accountSid = process.env.ACCOUNT_SID
+  verify = process.env.VERIFY_SERVICE_SID
+  outgoingApplicationSid = process.env.OUT_GOING_APPLICATION_SID_TWIML_APP
+  localTunnelUrl =  process.env.LOCAL_TUNNEL_URL
     
   client;
   constructor() {
