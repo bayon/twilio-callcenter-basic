@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-console.log('process.env:',process.env);
+
 const PORT = 3001;
 app.get('/test', (req, res) => {
  

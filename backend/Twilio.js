@@ -3,7 +3,7 @@ const VoiceResponse = require('twilio/lib/twiml/VoiceResponse');
 
 class Twilio {
 
-  phoneNumber = process.env.PHONE_NUMBER //may need to trim whitespace in .env 
+  phoneNumber = process.env.PHONE_NUMBER  
   phoneNumberSid = process.env.ACTIVE_NUMBER_SID
   tokenSid =  process.env.TOKEN_SID_API_KEY
   tokenSecret = process.env.TOKEN_SECRET_API_KEY

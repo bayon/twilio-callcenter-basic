@@ -112,10 +112,6 @@ function App() {
     setStoredToken(response.data.token);
   }
 
-  //console.log("==================== process.env....")
-  //console.log(process.env);
-  
-
   return (
     <div>
       {isValidToken ? (
