@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 
 class Socket {
-  url = 'http://localhost:3001';
+  url = process.env.REACT_APP_CALLCENTER_URL;
   client = null;
   constructor() {
     this.client = io.connect(this.url);
